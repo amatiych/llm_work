@@ -1,0 +1,28 @@
+{
+  "theme_id": "verdant_advisors",
+  "client_name": "Verdant Advisors",
+  "logo": "themes/logo_verdant.png",
+  "colors": {
+    "primary": "#1A5C2E",
+    "secondary": "#3A9B5C",
+    "accent": "#C4A832",
+    "text_dark": "#1A2E1A",
+    "text_light": "#F0F5F0",
+    "background_alt": "#EDF7EF",
+    "grid": "#C5D8C8"
+  },
+  "chart_palette": ["#1A5C2E", "#3A9B5C", "#C4A832", "#5C3A8B", "#C4543A", "#2E7090"],
+  "fonts": {
+    "heading": "Helvetica-Bold",
+    "body": "Helvetica",
+    "mono": "Courier"
+  },
+  "pdf": {
+    "header_text": "CONFIDENTIAL — Verdant Advisors",
+    "footer_text": "Prepared by Verdant Advisory Services"
+  },
+  "pptx": {
+    "title_slide_bg": "#1A5C2E",
+    "section_slide_bg": "#1A5C2E"
+  }
+}

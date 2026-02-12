@@ -1,0 +1,28 @@
+{
+  "theme_id": "ember_wealth",
+  "client_name": "Ember Wealth Partners",
+  "logo": "themes/logo_ember.png",
+  "colors": {
+    "primary": "#8B2500",
+    "secondary": "#D4652F",
+    "accent": "#FFD700",
+    "text_dark": "#2D1B0E",
+    "text_light": "#FFF8EE",
+    "background_alt": "#FDF5EC",
+    "grid": "#E8D5C4"
+  },
+  "chart_palette": ["#8B2500", "#D4652F", "#FFD700", "#5C8B3A", "#2E5090", "#9C5080"],
+  "fonts": {
+    "heading": "Helvetica-Bold",
+    "body": "Helvetica",
+    "mono": "Courier"
+  },
+  "pdf": {
+    "header_text": "CONFIDENTIAL — Ember Wealth Partners",
+    "footer_text": "Prepared by Ember Wealth Analytics"
+  },
+  "pptx": {
+    "title_slide_bg": "#8B2500",
+    "section_slide_bg": "#8B2500"
+  }
+}

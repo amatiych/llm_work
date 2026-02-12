@@ -1,0 +1,28 @@
+{
+  "theme_id": "alpine_capital",
+  "client_name": "Alpine Capital Management",
+  "logo": "themes/logo_alpine.png",
+  "colors": {
+    "primary": "#1B3A5C",
+    "secondary": "#4A90C4",
+    "accent": "#D4A843",
+    "text_dark": "#1A1A2E",
+    "text_light": "#F0F0F5",
+    "background_alt": "#EDF2F7",
+    "grid": "#CBD5E0"
+  },
+  "chart_palette": ["#1B3A5C", "#4A90C4", "#D4A843", "#2D8B6F", "#C4543A", "#7B68A8"],
+  "fonts": {
+    "heading": "Helvetica-Bold",
+    "body": "Helvetica",
+    "mono": "Courier"
+  },
+  "pdf": {
+    "header_text": "CONFIDENTIAL — Alpine Capital Management",
+    "footer_text": "Prepared by Alpine Capital Reporting"
+  },
+  "pptx": {
+    "title_slide_bg": "#1B3A5C",
+    "section_slide_bg": "#1B3A5C"
+  }
+}

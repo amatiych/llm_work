@@ -1,0 +1,72 @@
+{
+  "template_id": "equity_growth",
+  "name": "Equity Growth Fund Report",
+  "description": "For high-conviction, concentrated equity funds with significant volatility, drawdowns, and sector concentration. Emphasizes performance attribution, drawdown risk, and sector exposure.",
+  "match_criteria": {
+    "annualized_vol_pct_min": 12,
+    "max_drawdown_pct_min": 8,
+    "equity_weight_pct_min": 60,
+    "n_holdings_max": 20,
+    "has_sector_exposure": true
+  },
+  "report_title": "{fund_name}",
+  "report_subtitle": "Quarterly Performance Report",
+  "sections": [
+    {
+      "id": "exec_summary",
+      "title": "Executive Summary",
+      "chart": null,
+      "commentary_template": "The {fund_name} delivered an annualized return of {annualized_return_pct}% over the {n_months}-month period with {annualized_vol_pct}% annualized volatility, producing a Sharpe ratio of {sharpe_ratio}. The portfolio's {pct_positive_months}% positive-month rate reflects {positive_assessment}. Maximum drawdown reached {max_drawdown_pct}%, while the top-3 holdings represent {top_3_concentration_pct}% of assets, underscoring the fund's concentrated, high-conviction approach."
+    },
+    {
+      "id": "performance",
+      "title": "Performance vs Benchmark",
+      "chart": "line_chart",
+      "commentary_template": "The portfolio generated a cumulative return of {portfolio_total_return_pct}% versus the benchmark's {benchmark_total_return_pct}%, an excess return of {excess_return_pct} percentage points. {excess_assessment}"
+    },
+    {
+      "id": "contributors",
+      "title": "Performance Attribution",
+      "chart": "contributor_bar",
+      "commentary_template": "Individual holding returns ranged from {min_holding_return}% to {max_holding_return}%, reflecting the wide dispersion typical of concentrated growth strategies. The portfolio holds {n_holdings} positions with the top holding representing {top_holding_weight_pct}% of assets.",
+      "include_holdings_table": true
+    },
+    {
+      "id": "sector_concentration",
+      "title": "Sector Concentration",
+      "chart": "sector_bar",
+      "requires_data": "sector_exposure",
+      "commentary_template": "The portfolio exhibits significant sector concentration, with the dominant sector representing the majority of equity exposure. This thematic focus has been the primary driver of the fund's risk-return profile."
+    },
+    {
+      "id": "drawdown",
+      "title": "Drawdown Analysis",
+      "chart": "drawdown_chart",
+      "commentary_template": "Maximum drawdown reached {max_drawdown_pct}%, occurring during periods of broad market stress. Recovery periods have been {recovery_assessment} relative to the fund's volatility profile. Investors should expect periodic drawdowns as the cost of accessing the fund's return potential."
+    },
+    {
+      "id": "return_distribution",
+      "title": "Return Distribution",
+      "chart": "histogram",
+      "commentary_template": "Monthly returns exhibit skewness of {skewness} and kurtosis of {kurtosis}. {tail_assessment} The distribution spans from {min_return_pct}% to {max_return_pct}%, with a mean monthly return of {mean_monthly_pct}%."
+    },
+    {
+      "id": "rolling",
+      "title": "Rolling Performance",
+      "chart": "rolling_returns",
+      "commentary_template": "Rolling 12-month returns demonstrate the {consistency_assessment} of the strategy over time. The Sharpe ratio of {sharpe_ratio} reflects {risk_adjusted_assessment}."
+    },
+    {
+      "id": "risk_profile",
+      "title": "Risk Profile",
+      "chart": "spider_chart",
+      "commentary_template": "The fund's risk profile shows elevated {max_risk_category} ({max_risk_score}/10) and {second_risk_category}, consistent with the concentrated equity strategy. The average risk score of {avg_risk_score}/10 reflects the fund's aggressive positioning."
+    },
+    {
+      "id": "outlook",
+      "title": "Outlook",
+      "chart": null,
+      "commentary_template": "The portfolio remains positioned for continued growth through its concentrated holdings. Key risks include market drawdowns, sector rotation away from the dominant theme, and individual position volatility. The fund's {cash_weight_pct}% cash allocation provides limited but available dry powder for opportunistic deployment."
+    }
+  ]
+}

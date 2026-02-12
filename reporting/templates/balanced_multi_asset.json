@@ -1,0 +1,63 @@
+{
+  "template_id": "balanced_multi_asset",
+  "name": "Balanced Multi-Asset Report",
+  "description": "For diversified multi-asset portfolios with moderate volatility, balanced allocation across equities, fixed income, and alternatives. General-purpose template suitable when neither equity-growth nor stable-income templates match.",
+  "match_criteria": {
+    "annualized_vol_pct_min": 5,
+    "annualized_vol_pct_max": 20,
+    "n_asset_classes_min": 3
+  },
+  "report_title": "{fund_name}",
+  "report_subtitle": "Quarterly Investment Review",
+  "sections": [
+    {
+      "id": "exec_summary",
+      "title": "Executive Summary",
+      "chart": null,
+      "commentary_template": "The {fund_name} generated an annualized return of {annualized_return_pct}% with {annualized_vol_pct}% volatility over {n_months} months, producing a Sharpe ratio of {sharpe_ratio}. The portfolio is diversified across {n_asset_classes} asset classes with {pct_positive_months}% of months delivering positive returns."
+    },
+    {
+      "id": "performance",
+      "title": "Performance Overview",
+      "chart": "line_chart",
+      "commentary_template": "Cumulative portfolio return of {portfolio_total_return_pct}% compares to the benchmark's {benchmark_total_return_pct}%, representing {excess_return_pct} percentage points of excess return over the period."
+    },
+    {
+      "id": "allocation",
+      "title": "Asset Allocation",
+      "chart": "stacked_area",
+      "commentary_template": "The portfolio's allocation evolved over the period, with the largest shift in {largest_shift_name} ({largest_shift_magnitude} percentage points). {largest_allocation_name} remains the dominant allocation at {largest_allocation_pct}%."
+    },
+    {
+      "id": "current_mix",
+      "title": "Current Portfolio Mix",
+      "chart": "pie_chart",
+      "commentary_template": "The current allocation reflects a {allocation_style} positioning across {n_asset_classes} asset classes, balancing growth potential with risk management."
+    },
+    {
+      "id": "return_distribution",
+      "title": "Return Distribution",
+      "chart": "histogram",
+      "commentary_template": "Monthly returns ranged from {min_return_pct}% to {max_return_pct}% with skewness of {skewness} and kurtosis of {kurtosis}. The mean monthly return of {mean_monthly_pct}% is consistent with the fund's balanced mandate."
+    },
+    {
+      "id": "risk_profile",
+      "title": "Risk Assessment",
+      "chart": "spider_chart",
+      "commentary_template": "The risk profile shows {max_risk_category} as the highest-rated factor at {max_risk_score}/10, with an average score of {avg_risk_score}/10 across all dimensions. The {score_range}-point range between highest and lowest scores indicates a {risk_balance_assessment} risk distribution."
+    },
+    {
+      "id": "holdings",
+      "title": "Top Holdings",
+      "chart": null,
+      "commentary_template": "The portfolio's {n_holdings} holdings span multiple asset classes, with the top position representing {top_holding_weight_pct}% and top-3 concentration at {top_3_concentration_pct}%.",
+      "include_holdings_table": true
+    },
+    {
+      "id": "outlook",
+      "title": "Outlook",
+      "chart": null,
+      "commentary_template": "The fund's diversified positioning provides resilience across market scenarios. The strategic allocation balances growth opportunities with defensive positioning, appropriate for investors seeking moderate risk-adjusted returns."
+    }
+  ]
+}

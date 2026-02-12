@@ -1,0 +1,73 @@
+{
+  "template_id": "stable_income",
+  "name": "Stable Income Fund Report",
+  "description": "For conservative, income-oriented fixed-income funds with low volatility, diversified bond allocation, and yield focus. Emphasizes income consistency, duration management, and credit quality.",
+  "match_criteria": {
+    "annualized_vol_pct_max": 8,
+    "max_drawdown_pct_max": 5,
+    "n_holdings_min": 8,
+    "has_income_stream": true,
+    "has_duration_profile": true
+  },
+  "report_title": "{fund_name}",
+  "report_subtitle": "Quarterly Income & Performance Review",
+  "sections": [
+    {
+      "id": "exec_summary",
+      "title": "Executive Summary",
+      "chart": null,
+      "commentary_template": "The {fund_name} delivered an annualized return of {annualized_return_pct}% with just {annualized_vol_pct}% annualized volatility, achieving a Sharpe ratio of {sharpe_ratio}. Maximum drawdown was contained to {max_drawdown_pct}%, demonstrating the fund's capital preservation mandate. The portfolio maintains {n_asset_classes} distinct asset classes, providing robust diversification across the fixed-income spectrum."
+    },
+    {
+      "id": "income",
+      "title": "Income Generation",
+      "chart": "income_chart",
+      "requires_data": "income_stream",
+      "commentary_template": "The fund's primary objective — consistent income delivery — has been met with {pct_positive_months}% of months generating positive returns. The diversified yield sources across government, corporate, and securitized bonds provide resilient cash flow generation across market environments."
+    },
+    {
+      "id": "duration",
+      "title": "Duration & Rate Sensitivity",
+      "chart": "duration_bar",
+      "requires_data": "duration_profile",
+      "commentary_template": "The portfolio's duration profile reflects a balanced approach to interest rate risk, with exposure distributed across the maturity spectrum. This laddered structure provides flexibility to capture yield opportunities while managing rate sensitivity."
+    },
+    {
+      "id": "performance",
+      "title": "Performance vs Benchmark",
+      "chart": "line_chart",
+      "commentary_template": "The fund's {excess_return_pct} percentage point cumulative outperformance versus the benchmark was achieved while maintaining lower volatility than typical core bond strategies. The {annualized_return_pct}% annualized return provides meaningful real returns for income-focused investors."
+    },
+    {
+      "id": "allocation",
+      "title": "Portfolio Composition",
+      "chart": "pie_chart",
+      "commentary_template": "The portfolio maintains diversification across {n_asset_classes} asset classes. {largest_allocation_name} anchors the portfolio at {largest_allocation_pct}%, providing high-quality duration exposure. Allocation changes have been modest, with the largest shift of {largest_shift_magnitude} percentage points in {largest_shift_name}, reflecting the fund's stable approach."
+    },
+    {
+      "id": "risk_profile",
+      "title": "Risk & Credit Analysis",
+      "chart": "spider_chart",
+      "commentary_template": "The risk assessment reveals {max_risk_category} as the most elevated factor at {max_risk_score}/10, offset by notably low {min_risk_category} ({min_risk_score}/10). The average risk score of {avg_risk_score}/10 confirms the portfolio's conservative positioning."
+    },
+    {
+      "id": "holdings",
+      "title": "Holdings Overview",
+      "chart": "contributor_bar",
+      "commentary_template": "The portfolio's {n_holdings} holdings span multiple fixed-income sectors. {positive_holdings_assessment} The fund's diversified approach limits idiosyncratic risk while maintaining yield targets.",
+      "include_holdings_table": true
+    },
+    {
+      "id": "return_distribution",
+      "title": "Return Stability",
+      "chart": "histogram",
+      "commentary_template": "The return distribution confirms the fund's defensive profile, with monthly returns ranging from {min_return_pct}% to {max_return_pct}% — a narrow band reflecting the fixed-income nature. Skewness of {skewness} indicates {skew_assessment}."
+    },
+    {
+      "id": "outlook",
+      "title": "Outlook",
+      "chart": null,
+      "commentary_template": "The fund is well-positioned for the current rate environment. The balanced duration profile allows participation in potential rate cuts while the quality bias provides downside protection. Investors can expect continued focus on income consistency, capital preservation, and modest real returns."
+    }
+  ]
+}
